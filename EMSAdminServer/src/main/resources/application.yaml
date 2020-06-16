@@ -1,0 +1,19 @@
+server:
+   port: 9999
+eureka:
+   client:
+      service-url:
+         defaultZone: http://localhost:8761/
+      instance:
+         preferIpAddress: true
+      registerWithEureka: true
+      registryFetchIntervalSeconds: 5
+      fetchRegistry: true
+spring:
+   application:
+      name: emsadminserver
+   boot:
+    admin:
+      discovery:
+        ignored-services: gateway-server
+        
